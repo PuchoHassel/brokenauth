@@ -4,7 +4,7 @@
 	</head>
 
 	<body>
-		<form action="db.php" method="post">
+		<form action="index.php" method="get">
 		<Label>ID-number:</label>
 		<input type="number" name="ID"><br>
 		
@@ -20,19 +20,19 @@
 </html>
 
 <?php  
+		include "db.php";
 
-
-		echo "Your ID-number is: " .$_Post["ID"];
+		echo "Your ID-number is: " .$_GET["ID"];
 		echo "<br>";
-		echo "Your email is: " .$_Post["Email"];
+		echo "Your email is: " .$_GET["Email"];
 		echo "<br>";
-		echo "Your password is: " .$_Post["passw"];
+		echo "Your password is: " .$_GET["passw"];
 		echo "<br>";
 
 
-		$id=$_Post["ID"];
-		$email=$_Post["Email"];
-		$password=$_Post["passw"];
+		$id = $_GET["ID"];
+		$email = $_GET["Email"];
+		$password = $_GET["passw"];
 
 
 		$myConn = new DB;

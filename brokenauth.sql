@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2020 at 11:17 PM
+-- Generation Time: Dec 03, 2020 at 10:27 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -35,6 +35,13 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `email`, `password`) VALUES
+(2, 'admin@gmail.com', '1234567');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -43,6 +50,16 @@ CREATE TABLE `user` (
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
